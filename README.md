@@ -19,7 +19,7 @@ On **Craft-MD**, Multi-Med achieves up to **82.85% accuracy** (LLaMA-3-70B), and
 
 ---
 
-## 🏗️ Architecture
+## 🏗️
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -73,9 +73,9 @@ The framework consists of five specialized agents:
 
 | Model | Full Multi-Med | W/O Options | W/O Expert Guidance | W/O Summarization |
 |-------|---------------|-------------|---------------------|-------------------|
-| LLaMA-3-70B | 82.25% | 74.0% | — | 72.0% (−10.25) |
-| Gemma-3-27B | 70.7% | 59.0% | — | 64.0% (−6.7) |
-| LLaMA-3-8B | 62.8% | 56.0% | — | 49.3% (−13.5) |
+| LLaMA-3-70B | 82.25% | 74.0% | 70% | 72.0% (−10.25) |
+| Gemma-3-27B | 70.7% | 59.0% | 55% | 64.0% (−6.7) |
+| LLaMA-3-8B | 62.8% | 56.0% | 50% | 49.3% (−13.5) |
 
 ### Reconstruction Fidelity (Craft-MD)
 
@@ -194,20 +194,4 @@ generated           # Predicted answer indices
 
 ---
 
-## 📝 Citation
 
-If you use Multi-Med in your research, please cite:
-
-```bibtex
-@inproceedings{multimed2025,
-  title     = {Multi-Med: High-Fidelity Interactive Medical Diagnosis via Multi-Agent Framework},
-  author    = {Anonymized Authors},
-  year      = {2025}
-}
-```
-
----
-
-## 🤝 Acknowledgements
-
-Multi-Med builds on and compares against [MedIQ](https://arxiv.org/abs/2406.00922) (Kim et al., 2024) and evaluates on the [Craft-MD](https://arxiv.org/abs/2402.01374) (Johri et al., 2024) and [MedQA](https://arxiv.org/abs/2009.13081) (Jin et al., 2021) benchmarks. Reconstruction fidelity uses [BioBERT](https://academic.oup.com/bioinformatics/article/36/4/1234/5566506) embeddings.
