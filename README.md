@@ -18,29 +18,7 @@ Despite strong performance on single-turn medical benchmarks, LLMs struggle in r
 On **Craft-MD**, Multi-Med achieves up to **82.85% accuracy** (LLaMA-3-70B), and on **MedQA** up to **65.0%**, consistently outperforming state-of-the-art interactive methods while approaching performance parity with non-interactive single-turn baselines.
 
 ---
-
-## 🏗️
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        Multi-Med Pipeline                       │
-│                                                                 │
-│  Step 1          Step 2                Step 3        Step 4    │
-│  Case       Multi-Agent Clinical    Synthesis &     Final      │
-│  Vignette ─► Dialogue Simulation ─► Faithfulness ─► Single-   │
-│  Loading                             Evaluation     Turn Dx    │
-│                                                                 │
-│           ┌──────────────────────┐                             │
-│           │  Patient Agent       │ ◄── Case Vignette           │
-│           │       ▲  │           │                             │
-│           │       │  ▼           │                             │
-│           │  Interrogator Agent  │ ──► Summarizer ──► Diagnosis│
-│           │       ▲  │           │         Agent        Agent  │
-│           │       │  ▼           │                             │
-│           │    Expert Agent      │                             │
-│           └──────────────────────┘                             │
-└─────────────────────────────────────────────────────────────────┘
-```
+## Architecture
 
 The framework consists of five specialized agents:
 
